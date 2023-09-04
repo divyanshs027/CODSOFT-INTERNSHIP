@@ -1,0 +1,50 @@
+package internship;
+
+import  java.util.Scanner;
+
+public class StudentGradeCalcu {
+    public static void main(String[] args) {
+
+        System.out.println("Enter your marks");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Subject");
+
+        System.out.println("Mathmatics : ");
+        int math = sc.nextInt();
+
+        System.out.println("Hindi : ");
+        int hindi = sc.nextInt();
+
+        System.out.println("Science : ");
+        int science = sc.nextInt();
+
+        System.out.println("English : ");
+        int english = sc.nextInt();
+
+        System.out.println("History : ");
+        int history = sc.nextInt();
+
+        int totalMarks = (math + hindi + science + english + history);
+        System.out.println("Total marks obtain in 500 is : " + totalMarks);
+
+        float percentage = (((math + hindi + science + english + history) * 100f) / 500);
+        System.out.println("Average percentage : " + percentage);
+
+        if(percentage >= 90){
+            System.out.println("Grade : A");
+        }
+        else if( percentage >= 75){
+            System.out.println("Grade : B");
+        }
+        else if( percentage >= 65){
+            System.out.println("Grade : C");
+        }
+        else if( percentage >= 50){
+            System.out.println("Grade : D");
+        }
+        else {
+            System.out.println("Grade : F");
+        }
+    }
+}
